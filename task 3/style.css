@@ -1,0 +1,236 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto Slab', serif;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  padding-top:60px;
+  text-align: center;
+}
+h3{
+  text-align: center;
+  padding-top:250px;
+}
+::selection{
+  color: #fff;
+  background: #ff1b6b;
+}
+.wrapper{
+  width: 380px;
+  height: 530px;
+  padding: 28px 0 28px;
+  margin:auto;
+  margin-top: 60px;
+  margin-bottom: 20px;
+  background: #FFF0F3;
+  border-radius: 30px;
+  box-shadow: 0 10px 20px rgba(0,0.1,0,0.3);
+}
+.task-input{
+  height: 52px;
+  padding-left: 22px;
+  padding-right: 22px;
+  position: relative;
+}
+.task-input input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  font-size: 18px;
+  border-radius: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 3px solid #264653;
+  background-color: #FFF0F3;
+}
+.task-input input:focus,
+.task-input input.active{
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 3px solid #C9184A;
+  color: #C9184A;
+}
+.task-input input::placeholder{
+  color: #264653;
+}
+.controls, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  padding: 18px 25px;
+  border-bottom: 3px solid #FF1493;
+  border-bottom-style: double;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.filters span{
+  margin-right: 8px;
+  font-size: 17px;
+  color: #264653;
+  cursor: pointer;
+}
+.filters span:hover{
+  color: #FF4D6D;
+}
+.filters span.active{
+  color:#C9184A;
+  font-weight: bold;
+}
+.controls .clear-btn{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 100px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  background: #C9184A;
+  opacity: 0.9;
+}
+.clear-btn.active{
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.clear-btn:active{
+  transform: scale(0.93);
+}
+.task-box{
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+}
+.task-box.overflow{
+  overflow-y: auto;
+  max-height: 330px;
+}
+.task-box::-webkit-scrollbar{
+  width: 5px;
+}
+.task-box::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.task-box::-webkit-scrollbar-thumb{
+  background: #C9184A;
+  border-radius: 25px;
+}
+.task-box .task{
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  border-bottom: 2px solid #FF758F;
+  border-bottom-style: dashed;
+}
+.task-box .task label{
+  display: flex;
+  align-items: flex-start;
+  color: #264653;
+}
+.task label input{
+  margin-top: 7px;
+  accent-color: #C9184A;
+}
+.task label p{
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.task label p.checked{
+  text-decoration: line-through;
+}
+.task-box .settings{
+  position: relative;
+}
+.settings :where(i, li){
+  cursor: pointer;
+}
+.settings .task-menu{
+  z-index: 10;
+  right: -5px;
+  bottom: -65px;
+  padding: 5px 0;
+  background: #FFB3C1;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: top right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform 0.5s ease;
+}
+.task-box .task:last-child .task-menu{
+  bottom: 0;
+  transform-origin: bottom right;
+}
+.task-box .task:first-child .task-menu{
+  bottom: -65px;
+  transform-origin: top right;
+}
+.task-menu.show{
+  transform: scale(1);
+}
+.task-menu li{
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+.task-menu li:last-child{
+  margin-bottom: 0;
+}
+.settings li:hover{
+  background: #FFB3C1;
+}
+.settings li i{
+  padding-right: 10px;
+}
+.trade{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tradeprop{
+  color: aliceblue;
+  padding-top: 20px;
+}
+.error{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.errormsg{
+  font-size: 20px;
+  color: #C9184A;
+  font-weight: bold;
+}
+
+@media (max-width: 800px){
+
+  .body {
+    background-image: url(backgroundMOBILE.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+  }
+}

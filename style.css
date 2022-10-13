@@ -1,0 +1,47 @@
+* {
+    background-color: #ECD6FC;
+}
+
+h1 {
+    text-align: center;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 40px;
+}
+.card {
+    width: 250px;
+    height: 250px;
+    background-color: aliceblue;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 10px 12px 47px -18px rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inside-card,p,h2 {
+    background-color: aliceblue;
+    text-align: center;
+}
+button {
+    width: 150px;
+    height: 45px;
+    background-color: #46325D;
+    color: #ECD6FC;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.8s;
+}
+button:hover {
+    color: #FFE285;
+    transform: scale(1.01);
+}
+.end {
+    background-color: #ECD6FC;
+}
