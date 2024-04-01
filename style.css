@@ -44,13 +44,9 @@ button:hover {
 }
 .end {
     background-color: #ECD6FC;
-}
-
-.link {
-    background-color: #ECD6FC;
     text-decoration: none;
 }
 
-.link:hover {
+.end:hover {
     background-color: #fcbf49;
 }
