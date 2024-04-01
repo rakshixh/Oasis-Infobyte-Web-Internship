@@ -48,6 +48,7 @@ button:hover {
 
 .link {
     background-color: #ECD6FC;
+    text-decoration: none;
 }
 
 .link:hover {
