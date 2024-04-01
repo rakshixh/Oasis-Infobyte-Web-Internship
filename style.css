@@ -43,10 +43,11 @@ button:hover {
     transform: scale(1.01);
 }
 .end {
-    background-color: #ECD6FC;
+    color: #46325D;
     text-decoration: none;
+    text-align: center;
 }
 
 .end:hover {
-    background-color: #fcbf49;
+    color: #ef233c;
 }
