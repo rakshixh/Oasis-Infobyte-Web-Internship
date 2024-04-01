@@ -45,3 +45,11 @@ button:hover {
 .end {
     background-color: #ECD6FC;
 }
+
+.link {
+    background-color: #ECD6FC;
+}
+
+.link:hover {
+    background-color: #fcbf49;
+}
